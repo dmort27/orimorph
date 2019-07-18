@@ -1,0 +1,38 @@
+Multichar_Symbols
++1 +2 +3
++Sg +Pl
++Hon +Infr
++Anim +Inanim
++Nom +Acc +Gen +Instr +Loc +Abl
+^GUESSNOUNSTEM
+
+LEXICON Root
+0:0 Stem;
+
+LEXICON Stem
+^GUESSNOUNSTEM Number;
+
+LEXICON Number
++Sg:0 AnimCase;
++Sg:0 InanimCase;
++Pl:ମାନେ AnimCase;
++Pl:ଗୁଡିକ InanimCase;
+
+LEXICON AnimCase
++Nom:0 Definiteness;
++Acc:କୁ Definiteness;
++Acc:ଙ୍କୁ Definiteness;
++Gen:ର Definiteness;
++Instr:ରେ Definiteness;
++Loc:ରେ Definiteness;
++Abl:ରୁ Definiteness;
+
+LEXICON InanimCase
++Instr:ଦ୍ୱର Definiteness;
++Loc:ଠାରେ Definiteness;
++Abl:ଠାରୁ Definiteness;
+
+LEXICON Definiteness
++Def:ଟି #;
++Def:ଟା #;
+0:0 #;

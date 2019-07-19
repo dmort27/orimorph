@@ -23,6 +23,9 @@ LEXICON InanimNumber
 +Sg:0 Honorific;
 +Pl:ଗୁଡିକ Honorific;
 +Pl:ଗୁଡ଼ିକ Honorific;
++Pl+Acc:ଗୁଡିକୁ Definiteness;
++Pl+Acc:ଗୁଡ଼ିକୁ Definiteness;
+
 
 LEXICON Honorific
 +Hon:ଙ୍କ୍ Case;

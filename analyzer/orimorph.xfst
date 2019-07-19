@@ -2,12 +2,15 @@
 
 clear stack
 
-# define Cons 0 | p | t | k | b | d | g | t s | t i | d i | s | s i | h | m | n | n i | n g | l | l i | r | r r | w | y ;
-# define Vow a | e | i | o | u ;
+define FullVow ଅ | ଆ | ଇ | ଈ | ଉ | ଊ | ଋ | ୠ | ଌ | ୡ | ଏ | ଐ | ଓ | ଔ ;
+define DiaVow ା | ି | ୀ | ୁ | ୂ | ୃ | େ | ୈ | ୋ | ୌ ;
+define Cons କ | ଖ | ଗ | ଘ | ଙ | ଚ | ଛ | ଜ | ଝ | ଞ | ଟ | ଠ | ଡ | ଢ | ଣ | ତ | ଥ | ଦ | ଧ | ନ | ପ | ଫ | ବ | ଭ | ମ | ଯ | ର | ଳ | ୱ | ଵ | ଶ | ଷ | ସ | ହ | କ୍ଷ | ୟ | ଲ ;
+define Nas ଂ | ଁ ;
+define Virama ୍ ;
 
 # define Stem [[Cons | Vow]+ (Cons)] "+Guess":0;
 
-define Stem ?+ "+Guess":0;
+define Stem [ [ FullVow ( Nas ) | Cons ( [ DiaVow | Virama ] ) ( Nas ) ] [ Cons ( [ DiaVow | Virama ] ) ( Nas ) ]+ ] "+Guess":0;
 
 read lexc < orimorph.lexc
 

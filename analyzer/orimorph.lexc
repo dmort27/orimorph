@@ -4,16 +4,34 @@ Multichar_Symbols
 +Hon +Infr
 +Anim +Inanim
 +Nom +Acc +Gen +Instr +Loc +Abl
+@U.ANIM.HUMAN@ @U.ANIM.NONHUMAN@
 ^GUESSNOUNSTEM
 
 LEXICON Root
 0:0 Stem;
 
-LEXICON Number
-+Sg:0 AnimCase;
-+Sg:0 InanimCase;
-+Pl:ମାନେ AnimCase;
-+Pl:ଗୁଡିକ InanimCase;
+LEXICON Animacy
+@U.ANIM.HUMAN@ AnimNumber;
+@U.ANIM.NONHUMAN@ InanimNumber;
+
+LEXICON AnimNumber
++Sg:0 Honorific;
++Pl:ମାନେ Honorific;
++Pl:ମାନ Honorific;
+
+LEXICON InanimNumber
++Sg:0 Honorific;
++Pl:ଗୁଡିକ Honorific;
++Pl:ଗୁଡ଼ିକ Honorific;
+
+LEXICON Honorific
++Hon:ଙ୍କ୍ Case;
++Hon:ଙ୍କ Case;
+Case;
+
+LEXICON Case
+@U.ANIM.HUMAN@ AnimCase;
+@U.ANIM.NONHUMAN@ InanimCase;
 
 LEXICON AnimCase
 +Nom:0 Definiteness;
@@ -25,6 +43,7 @@ LEXICON AnimCase
 +Abl:ରୁ Definiteness;
 
 LEXICON InanimCase
++Nom:0 Definiteness;
 +Instr:ଦ୍ୱର Definiteness;
 +Loc:ଠାରେ Definiteness;
 +Abl:ଠାରୁ Definiteness;
@@ -32,10 +51,10 @@ LEXICON InanimCase
 LEXICON Definiteness
 +Def:ଟି #;
 +Def:ଟା #;
-0:0 #;
+#;
 
 LEXICON Stem
-^GUESSNOUNSTEM Number;
+^GUESSNOUNSTEM Animacy;
 ପରିତ୍ୟାଗ #;
 ପରିତ୍ୟକ୍ତ #;
 ପରିତ୍ୟାଗ #;

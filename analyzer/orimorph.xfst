@@ -4,14 +4,15 @@ clear stack
 
 define FullVow ଅ | ଆ | ଇ | ଈ | ଉ | ଊ | ଋ | ୠ | ଌ | ୡ | ଏ | ଐ | ଓ | ଔ ;
 define DiaVow ା | ି | ୀ | ୁ | ୂ | ୃ | େ | ୈ | ୋ | ୌ ;
-define Cons କ | ଖ | ଗ | ଘ | ଙ | ଚ | ଛ | ଜ | ଝ | ଞ | ଟ | ଠ | ଡ | ଢ | ଣ | ତ | ଥ | ଦ | ଧ | ନ | ପ | ଫ | ବ | ଭ | ମ | ଯ | ର | ଳ | ୱ | ଵ | ଶ | ଷ | ସ | ହ | କ୍ଷ | ୟ | ଲ ;
+define Cons କ | ଖ | ଗ | ଘ | ଙ | ଚ | ଛ | ଜ | ଝ | ଞ | ଟ | ଠ | ଡ | ଡ ଼ | ଢ | ଢ ଼ | ଣ | ତ | ଥ | ଦ | ଧ | ନ | ପ | ଫ | ବ | ଭ | ମ | ଯ | ର | ଳ | ୱ | ଵ | ଶ | ଷ | ସ | ହ | କ୍ଷ | ୟ | ଲ ;
 define Nas ଂ | ଁ ;
 define Virama ୍ ;
 
-# define Stem [[Cons | Vow]+ (Cons)] "+Guess":0;
+define Stem [ FullVow | Cons | DiaVow | Nas | Virama ]+ "+Guess":0;
 
-define Stem [ [ FullVow ( Nas ) | Cons ( [ DiaVow | Virama ] ) ( Nas ) ] [ Cons ( [ DiaVow | Virama ] ) ( Nas ) ]+ ] "+Guess":0;
+# define Stem [ [ FullVow ( Nas ) | Cons ( [ DiaVow | Virama ] ) ( Nas ) ] [ Cons ( [ DiaVow | Virama ] ) ( Nas ) ]+ ] "+Guess":0;
 
+# read lexc < universal.lexc
 read lexc < orimorph.lexc
 
 substitute defined Stem for "^GUESSNOUNSTEM"

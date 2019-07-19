@@ -4,6 +4,7 @@ Multichar_Symbols
 +Hon +Infr
 +Anim +Inanim
 +Nom +Acc +Gen +Instr +Loc +Abl
++Def +Indef
 @U.ANIM.HUMAN@ @U.ANIM.NONHUMAN@
 ^GUESSNOUNSTEM
 
@@ -25,7 +26,6 @@ LEXICON InanimNumber
 +Pl:ଗୁଡ଼ିକ Honorific;
 +Pl+Acc:ଗୁଡିକୁ Definiteness;
 +Pl+Acc:ଗୁଡ଼ିକୁ Definiteness;
-
 
 LEXICON Honorific
 +Hon:ଙ୍କ୍ Case;
@@ -52,9 +52,19 @@ LEXICON InanimCase
 +Abl:ଠାରୁ Definiteness;
 
 LEXICON Definiteness
+@U.ANIM.HUMAN@ AnimDefiniteness;
+@U.ANIM.NONHUMAN@ InanimDefiniteness;
+#;
+
+LEXICON AnimDefiniteness
++Def:କ #;
+
+LEXICON InanimDefiniteness
 +Def:ଟି #;
 +Def:ଟା #;
-#;
++Indef:ଟେ #;
++Indef:ଟିଏ #;
++Indef:ଟାଏ #;
 
 LEXICON Stem
 ^GUESSNOUNSTEM Animacy;

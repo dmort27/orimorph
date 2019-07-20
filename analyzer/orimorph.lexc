@@ -17,7 +17,7 @@ LEXICON Animacy
 
 LEXICON AnimNumber
 +Sg:0 Honorific;
-+Pl:ମାନେ Honorific;
++Pl:ମାନେ #;
 +Pl:ମାନ Honorific;
 
 LEXICON InanimNumber

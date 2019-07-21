@@ -39,7 +39,7 @@ LEXICON Case
 LEXICON AnimCase
 +Nom:0 Definiteness;
 +Acc:କୁ Definiteness;
-+Acc:ଙ୍କୁ Definiteness;
++Hon+Acc:ଙ୍କୁ Definiteness;
 +Gen:ର Definiteness;
 +Instr:ରେ Definiteness;
 +Loc:ରେ Definiteness;
@@ -57,14 +57,17 @@ LEXICON Definiteness
 #;
 
 LEXICON AnimDefiniteness
-+Def:କ #;
++Def:କ Punctuation;
 
 LEXICON InanimDefiniteness
-+Def:ଟି #;
-+Def:ଟା #;
-+Indef:ଟେ #;
-+Indef:ଟିଏ #;
-+Indef:ଟାଏ #;
++Def:ଟି Punctuation;
++Def:ଟା Punctuation;
++Indef:ଟେ Punctuation;
++Indef:ଟିଏ Punctuation;
++Indef:ଟାଏ Punctuation;
+
+LEXICON Punctuation
+#;
 
 LEXICON Stem
 ^GUESSNOUNSTEM Animacy;
